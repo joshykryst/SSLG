@@ -1,0 +1,694 @@
+/* Main Container */
+.grades-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.welcome-section h1 {
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+}
+
+/* Grade Summary Cards */
+.grade-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.summary-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-2px);
+}
+
+.summary-card i {
+    font-size: 2rem;
+    color: #1a237e;
+}
+
+.summary-info h3 {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.summary-info p {
+    color: #1a237e;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Grades Table Section */
+.grades-section {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 0; /* Reset any top margin */
+}
+
+.grades-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.grades-header h2 {
+    color: #1a237e;
+    font-size: 1.25rem;
+}
+
+.grade-filters select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    color: #444;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.grade-filters select:hover {
+    border-color: #1a237e;
+}
+
+/* Grades Table */
+.grades-table-wrapper {
+    overflow-x: auto;
+    margin: 0 -1rem;
+    padding: 0 1rem;
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.grades-table th,
+.grades-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.grades-table th {
+    background: #f8f9fa;
+    color: #1a237e;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.grades-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.grade-value {
+    font-weight: 600;
+    color: #1a237e;
+}
+
+.remarks {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.grades-table th:nth-child(1), .grades-table td:nth-child(1) { width: 40%; } /* Subject */
+.grades-table th:nth-child(2), .grades-table td:nth-child(2) { width: 30%; } /* Grade */
+.grades-table th:nth-child(3), .grades-table td:nth-child(3) { width: 30%; } /* Remarks */
+
+/* Quarter Selector */
+.quarter-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.quarter-buttons {
+    display: flex;
+    margin-left: 10px;
+}
+
+.quarter-btn {
+    padding: 8px 15px;
+    margin: 0 5px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.quarter-btn.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.quarter-btn:hover {
+    background-color: #ddd;
+}
+
+.quarter-btn.active:hover {
+    background-color: #2980b9;
+}
+
+/* Academic Summary Section */
+.grades-summary {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem; /* Change margin-top to margin-bottom */
+    order: -1; /* This will place it at the top when used with flexbox */
+}
+
+.grades-summary h2 {
+    color: #1a237e;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.summary-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a237e;
+}
+
+.stat-value.standing {
+    color: #28a745;
+}
+
+/* Different colors for academic standings */
+.standing.honors {
+    color: #28a745;  /* Green for honors */
+}
+
+.standing.high-honors {
+    color: #007bff;  /* Blue for high honors */
+}
+
+.standing.highest-honors {
+    color: #9c27b0;  /* Purple for highest honors */
+}
+
+.no-grades {
+    text-align: center;
+    color: #666;
+    padding: 2rem 0;
+    font-style: italic;
+}
+
+/* Add passed/failed classes */
+.passed {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.failed {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+/* Navbar Styles */
+.main-nav {
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+}
+
+.nav-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.nav-left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 30px !important;
+}
+
+.nav-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    text-decoration: none !important;
+}
+
+.nav-logo {
+    height: 50px !important;
+    width: auto !important;
+}
+
+.brand-text {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.brand-text h1 {
+    color: #1a237e !important;
+    font-size: 1.2rem !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
+}
+
+.brand-text p {
+    color: #555 !important;
+    font-size: 0.7rem !important;
+    margin: 0 !important;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    padding: 8px 0;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.nav-links a.active {
+    color: #3498db;
+}
+
+.nav-links a.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-profile {
+    position: relative;
+}
+
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+}
+
+.profile-trigger:hover {
+    background-color: #e9ecef;
+}
+
+.profile-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3498db;
+}
+
+.profile-name {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.portal-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.portal-btn:hover {
+    background-color: #2980b9;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1100;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background-color: #1a237e;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sidebar-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid white;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.sidebar-nav {
+    padding: 20px;
+}
+
+.nav-section {
+    margin-bottom: 30px;
+}
+
+.nav-section h4 {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-section a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.nav-section a:hover {
+    background-color: #f8f9fa;
+    color: #3498db;
+}
+
+.nav-section a.active {
+    background-color: #e3f2fd;
+    color: #3498db;
+}
+
+.nav-section a.logout-btn {
+    color: #e74c3c;
+}
+
+.nav-section a.logout-btn:hover {
+    background-color: #ffebee;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+/* Icon styling with emojis */
+.icon-login:before {
+    content: "🔑";
+}
+
+.icon-register:before {
+    content: "📝";
+}
+
+.icon-info:before {
+    content: "ℹ️";
+}
+
+.icon-contact:before {
+    content: "📞";
+}
+
+.icon-dashboard:before {
+    content: "📊";
+}
+
+.icon-profile:before {
+    content: "👤";
+}
+
+.icon-grades:before {
+    content: "📝";
+}
+
+.icon-calendar:before {
+    content: "📅";
+}
+
+.icon-messages:before {
+    content: "✉️";
+}
+
+.icon-notifications:before {
+    content: "🔔";
+}
+
+.icon-settings:before {
+    content: "⚙️";
+}
+
+.icon-logout:before {
+    content: "🚪";
+}
+
+.icon-menu:before {
+    content: "☰";
+}
+
+.icon-close:before {
+    content: "✖";
+}
+
+.icon-location:before {
+    content: "📍";
+}
+
+.icon-phone:before {
+    content: "📞";
+}
+
+.icon-envelope:before {
+    content: "📧";
+}
+
+.icon-clock:before {
+    content: "⏰";
+}
+
+/* Responsive navbar */
+@media (max-width: 1024px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .brand-text p {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .grades-container {
+        padding: 1rem;
+    }
+
+    .summary-card {
+        padding: 1rem;
+    }
+
+    .grades-table th,
+    .grades-table td {
+        padding: 0.75rem;
+    }
+
+    .grades-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .summary-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat {
+        padding: 1rem;
+    }
+
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .nav-logo {
+        height: 40px;
+    }
+
+    .brand-text h1 {
+        font-size: 1rem;
+    }
+
+    .profile-name {
+        display: none;
+    }
+
+    .profile-trigger {
+        padding: 5px;
+    }
+    
+    .portal-btn span {
+        display: none;
+    }
+    
+    .portal-btn {
+        padding: 8px 12px;
+    }
+    
+    .sidebar {
+        width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-text {
+        display: none;
+    }
+    
+    .nav-logo {
+        height: 35px;
+    }
+    
+    .sidebar {
+        width: 260px;
+    }
+}

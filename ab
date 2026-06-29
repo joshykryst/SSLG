@@ -1,0 +1,113 @@
+outs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CMRICTHS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-left">
+                <div class="nav-brand">
+                    <img src="logo.png" alt="CMRICTHS Logo" class="nav-logo">
+                    <div class="brand-text">
+                        <h1>CMRICTHS</h1>
+                        <p>Information and Communication Technology High School</p>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="Indexs.php">Home</a>
+                    <a href="#about" class="active">About</a>
+                    <a href="#academics">Academics</a>
+                    <a href="#admissions">Admissions</a>
+                    <a href="#facilities">Facilities</a>
+                    <a href="#news">News & Events</a>
+                    <a href="contacts.php">Contact</a>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <a href="Login.php" class="portal-btn">Student Login</a>
+                <button class="menu-btn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="hero">
+            <div class="hero-content">
+                <h1>About CMRICTHS</h1>
+                <p>Shaping the Future of ICT Education</p>
+            </div>
+        </header>
+
+        <section class="about-section container">
+            <div class="two-column">
+                <div class="about-content">
+                    <h2>Our Story</h2>
+                    <p class="lead">Founded in 2010, CMRICTHS has been at the forefront of ICT education in our region.</p>
+                    <p>We are dedicated to providing quality education and developing skilled ICT professionals who will lead the future of technology innovation.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Students</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Expert Faculty</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Employment Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="school-building.jpg" alt="CMRICTHS Building">
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose CMRICTHS?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="icon icon-graduation"></i>
+                        <h3>Quality Education</h3>
+                        <p>Comprehensive ICT curriculum aligned with industry standards</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="icon icon-laptop"></i>
+                        <h3>Modern Facilities</h3>
+                        <p>State-of-the-art computer laboratories and learning spaces</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="icon icon-users"></i>
+                        <h3>Expert Faculty</h3>
+                        <p>Learn from experienced industry professionals</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as Indexs.php) -->
+    <footer class="footer">
+        <!-- Copy the entire footer section from Indexs.php -->
+        ...existing footer code...
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

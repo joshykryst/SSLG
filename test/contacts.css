@@ -1,0 +1,179 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('mathh.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6); /* 60% opacity overlay */
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 90%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.left {
+    flex: 1.5;
+    padding: 50px;
+    background: #16a085;
+    color: white;
+    position: relative;
+}
+
+.left::after {
+    content: "";
+    position: absolute;
+    top: 40%; /* Moved higher */
+    right: -20px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #16a085;
+}
+
+.left h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.left p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+.facebook-btn img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(0) invert(1); /* Makes the logo white */
+}
+
+.facebook-btn img:hover {
+    transform: scale(1.1);
+}
+
+
+
+.right {
+    flex: 1;
+    padding: 30px;
+    background: #ecf0f1;
+    position: relative;
+}
+
+.right::before {
+    content: "";
+    position: absolute;
+    top: 40%; /* Moved higher */
+    left: -20px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background: #16a085;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #138f76;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 100%;
+        text-align: center;
+    }
+    .right::before {
+        display: none;
+    }
+    .left::after {
+        display: none;
+    }
+}

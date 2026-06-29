@@ -1,0 +1,114 @@
+/* General form styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'Aharoni', sans-serif;
+}
+
+.frame {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Labels */
+label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Input fields */
+input[type="text"], 
+input[type="date"],
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Name container (First Name & Last Name) */
+.name-container {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.name-container input {
+    width: 50%;
+}
+
+/* Gender container */
+.gender-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 15px 0;
+    position: relative;
+    gap: 10px;
+}
+
+/* Fix alignment of radio buttons */
+.gender-container input[type="radio"] {
+    margin: 0;
+    transform: scale(1.2);
+    position: relative;
+    top: -2px;
+}
+
+/* Add horizontal line below gender */
+.gender-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #5cb85c;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #4cae4c;
+}

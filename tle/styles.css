@@ -1,0 +1,128 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FBFFE4 ;
+    text-align: center;
+}
+
+.topnav {
+    background: #B3D8A8;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: auto; 
+    height: 64px; /* Reduced from 80px to 70px */
+    padding: 0 25px; /* Slightly reduced padding */
+}
+
+.topnav .rawr {
+    justify-content: flex-end;
+    margin-left: auto;
+    color: #3D8D7A;
+    padding: 19px 28px; /* Slightly reduced */
+    text-decoration: none;
+    font-size: 22px; /* Reduced from 24px to 22px */
+    transition: 0.3s ease;
+    text-align: center; 
+	align-content: right;
+}
+
+.topnav a {
+    color: #3D8D7A;
+    padding: 13.5px 23px; /* Slightly reduced */
+    text-decoration: none;
+    font-size: 22px; /* Reduced from 24px to 22px */
+    transition: 0.3s ease;
+    text-align: center; 
+	border-radius: 12px; 
+	
+}
+
+.topnav a:hover {
+    background-color: #3D8D7A;
+    color: #b30059;
+    transform: scale(1.04);
+}        
+
+.topnav a.active {
+    background-color: #3D8D7A;
+    color: white;
+}
+.topnav .fund {
+	text-align: left;
+	color: white;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    background-color: #1b1b5f;
+    padding: 10px;
+}
+
+.tab button {
+    background-color: #3D8D7A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.tab button:hover, .tab button.active {
+    background-color: #3D8D7A;
+}
+
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+
+.signup-btn {
+    background-color: #3D8D7A !important; 
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    margin: 5px !important;
+    border-radius: 5px !important;
+    transition: background 0.3s ease !important;
+}
+
+.signup-btn:hover {
+    background-color: #3D8D7A !important;
+}
+

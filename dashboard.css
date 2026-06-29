@@ -1,0 +1,1075 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f9;
+    min-height: 100vh;
+}
+
+
+.main-content {
+    margin-top: 80px;
+    padding: 2rem;
+    background: #f4f6f9;
+    min-height: 100vh;
+    padding-top: 70px; 
+    transition: margin-right 0.3s ease, width 0.3s ease;
+    width: 100%;
+    position: relative;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: max-width 0.3s ease, padding 0.3s ease;
+    padding: 0 15px;
+}
+
+
+.welcome-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.welcome-section h1 {
+    color: #1a237e;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-section p {
+    color: #666;
+    font-size: 1rem;
+}
+
+
+.profile-info-section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.profile-image {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image-upload {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-image:hover .image-upload {
+    opacity: 1;
+}
+
+.upload-btn {
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-basic h3 {
+    font-size: 1.5rem;
+    color: #1a237e;
+    margin: 0 0 0.5rem 0;
+}
+
+.profile-basic p {
+    color: #666;
+    margin: 0.2rem 0;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-info h3 {
+    color: #1a237e;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.stat-info p {
+    color: #666;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+.dashboard-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.dashboard-card h2 {
+    color: #1a237e;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.quick-link {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.quick-link:hover {
+    background: #e3f2fd;
+    transform: translateX(5px);
+    color: #1a237e;
+}
+
+/* Activity Section */
+.activity-section .activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    gap: 1rem;
+}
+
+.activity-details p {
+    margin: 0;
+    color: #333;
+}
+
+.activity-details small {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Profile Details */
+.detail-group {
+    margin-bottom: 2rem;
+}
+
+.detail-group h4 {
+    color: #1a237e;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 0.8rem;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.detail-row .label {
+    width: 150px;
+    color: #666;
+    font-weight: 500;
+}
+
+.detail-row .value {
+    color: #333;
+    flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-links {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-row {
+        flex-direction: column;
+    }
+
+    .detail-row .label {
+        width: 100%;
+        margin-bottom: 0.3rem;
+    }
+}
+
+/* Icons */
+.icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a237e;
+}
+
+/* Icon classes */
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5rem;
+}
+
+/* Replacing Font Awesome icons with emojis */
+
+/* Remove Font Awesome icon classes */
+.icon-dashboard::before { content: '🏠'; font-family: initial; font-weight: normal; }
+.icon-user::before { content: '👤'; font-family: initial; font-weight: normal; }
+.icon-grades::before { content: '📊'; font-family: initial; font-weight: normal; }
+.icon-calendar::before { content: '📅'; font-family: initial; font-weight: normal; }
+.icon-messages::before { content: '✉️'; font-family: initial; font-weight: normal; }
+.icon-notifications::before { content: '🔔'; font-family: initial; font-weight: normal; }
+.icon-settings::before { content: '⚙️'; font-family: initial; font-weight: normal; }
+.icon-logout::before { content: '🚪'; font-family: initial; font-weight: normal; }
+.icon-login::before { content: '🔑'; font-family: initial; font-weight: normal; }
+.icon-register::before { content: '📝'; font-family: initial; font-weight: normal; }
+.icon-info::before { content: 'ℹ️'; font-family: initial; font-weight: normal; }
+.icon-contact::before { content: '📞'; font-family: initial; font-weight: normal; }
+.icon-close::before { content: '✖️'; font-family: initial; font-weight: normal; }
+.icon-home::before { content: '🏠'; font-family: initial; font-weight: normal; }
+.icon-gallery::before { content: '🖼️'; font-family: initial; font-weight: normal; }
+
+/* Update icon sizing for emojis */
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 0.75rem;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Fix emoji spacing in navigation */
+.nav-section a span {
+    margin-right: 0.75rem;
+    font-size: 16px;
+    min-width: 24px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Improve spacing for emojis in sidebar */
+.sidebar-nav .icon {
+    margin-right: 10px;
+    width: 24px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-profile-btn {
+    background: #1a237e;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.edit-profile-btn:hover {
+    background: #283593;
+}
+
+.cancel-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+    background: #c82333;
+}
+
+.form-actions {
+    display: none;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+input[readonly], select[readonly] {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+}
+
+.profile-form input[readonly] {
+    border-color: transparent;
+    padding-left: 0;
+}
+
+/* Form Editing States */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #1a237e;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.1);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form-section {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.form-section h4 {
+    color: #1a237e;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e3f2fd;
+}
+
+/* Edit mode styles */
+.edit-mode input:not([readonly]),
+.edit-mode select {
+    background-color: #fff !important;
+    border: 1px solid #ddd !important;
+    padding: 8px !important;
+}
+
+.edit-mode .form-actions {
+    display: flex;
+}
+
+input[readonly] {
+    background-color: transparent;
+    border: none;
+    padding: 8px 0;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.save-btn {
+    background: #1a237e;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.save-btn:hover {
+    background: #283593;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #1a237e;
+    font-size: 1.5rem;
+}
+
+.close-modal {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.modal-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* Form Styles within Modal */
+.form-section {
+    margin-bottom: 1.5rem;
+}
+
+.form-section h4 {
+    color: #1a237e;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.save-btn {
+    background: #1a237e;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #283593;
+}
+
+.cancel-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #c82333;
+}
+
+/* Add or update these styles */
+.form-group input.editable,
+.form-group select {
+    background-color: #fff !important;
+    border: 1px solid #ddd !important;
+    padding: 8px !important;
+    cursor: text;
+}
+
+.form-group input[readonly] {
+    background-color: transparent;
+    border: none;
+    cursor: default;
+}
+
+.form-actions {
+    display: none;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.editing .form-actions {
+    display: flex;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.cancel-btn,
+.save-btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.save-btn {
+    background: #1a237e;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #c82333;
+}
+
+.save-btn:hover {
+    background: #283593;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 70px; /* This aligns it just below the navbar height */
+    right: -300px; /* Initially hidden off-screen */
+    width: 300px;
+    height: calc(100vh - 70px); /* Adjust height to account for navbar */
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 99;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    right: 0; /* Shows sidebar when active */
+}
+
+/* Sidebar overlay adjustment */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 70px; /* Start below navbar */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px); /* Cover everything below navbar */
+    background-color: rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* Fix body padding when sidebar open on mobile */
+body.sidebar-open {
+    overflow: hidden;
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    background-color: rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    background: linear-gradient(135deg, #1a237e, #3949ab);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.sidebar-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 1rem;
+}
+
+.sidebar-header h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: opacity 0.3s;
+}
+
+.close-btn:hover {
+    opacity: 0.8;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+    padding: 1.5rem;
+}
+
+.nav-section {
+    margin-bottom: 2rem;
+}
+
+.nav-section h4 {
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-left: 0.75rem;
+}
+
+.nav-section a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.nav-section a:hover,
+.nav-section a.active {
+    background-color: rgba(26, 35, 126, 0.05);
+    color: #1a237e;
+}
+
+.nav-section a span {
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+}
+
+/* Fix for sidebar nav items */
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.sidebar-nav a:hover, 
+.sidebar-nav a.active {
+    background-color: rgba(26, 35, 126, 0.05);
+    color: #1a237e;
+}
+
+.sidebar-nav .icon {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Logout button */
+.logout-btn {
+    color: #dc3545 !important;
+}
+
+.logout-btn:hover {
+    background-color: #fff5f5 !important;
+}
+
+/* Custom Scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Sidebar Header with Emoji */
+.sidebar-header {
+    background: linear-gradient(135deg, #1a237e, #3949ab);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-emoji {
+    font-size: 3.5rem; /* Larger emoji size */
+    line-height: 1;
+}
+
+.user-details h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: opacity 0.3s;
+}
+
+/* Navigation Links with Emojis */
+.nav-section {
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+}
+
+.nav-section h4 {
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin: 1.5rem 0 1rem 0;
+    padding-left: 0.5rem;
+}
+
+.nav-section a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.nav-section a:hover,
+.nav-section a.active {
+    background-color: #f0f2ff;
+    color: #1a237e;
+}
+
+/* Emoji spacing in navigation */
+.nav-section a span {
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+    min-width: 24px;
+    text-align: center;
+}
+
+/* Logout button */
+.logout-btn {
+    color: #dc3545 !important;
+}
+
+.logout-btn:hover {
+    background-color: #fff5f5 !important;
+}
+
+/* Profile Trigger in Nav */
+.profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.profile-trigger:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.profile-name {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Custom Scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Main content adjustment when sidebar is open */
+.main-content {
+    transition: margin-right 0.3s ease, width 0.3s ease;
+    width: 100%;
+    position: relative;
+}
+
+/* When sidebar is active, adjust the main content width and position */
+@media (min-width: 992px) {
+    body.sidebar-open .main-content {
+        width: calc(100% - 300px);
+        margin-right: 300px;
+    }
+}
+
+/* Ensure the sidebar open class gets applied */
+body.sidebar-open {
+    overflow: hidden; /* Already exists but important for mobile */
+}
+
+/* Ensure dashboard container adjusts properly */
+.dashboard-container {
+    transition: max-width 0.3s ease, padding 0.3s ease;
+    padding: 0 15px;
+}
+
+/* Override max-width constraint when sidebar is open */
+body.sidebar-open .dashboard-container {
+    padding-right: 15px;
+}
+
+/* Ensure the footer also adjusts */
+footer {
+    transition: width 0.3s ease, margin-right 0.3s ease;
+}
+
+@media (min-width: 992px) {
+    body.sidebar-open footer {
+        width: calc(100% - 300px);
+        margin-right: 300px;
+    }
+}
+
+/* Status messages */
+.status-message {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.3s;
+}
+
+.status-success {
+    background-color: rgba(46, 204, 113, 0.2);
+    border-left: 4px solid #2ecc71;
+    color: #27ae60;
+}
+
+.status-error {
+    background-color: rgba(231, 76, 60, 0.2);
+    border-left: 4px solid #e74c3c;
+    color: #c0392b;
+}
+
+.status-message i {
+    margin-right: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
